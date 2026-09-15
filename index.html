@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOODZONE | Ăn ngon - Giá rẻ - Chuẩn Sinh Viên</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fa-solid class fa-utensils"></i></span>
+                <span class="logo-text">FOOD<span class="highlight">ZONE</span></span>
+            </a>
+
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="searchInput" placeholder="Tìm món ngon: cơm sườn, mì cay, trà sữa...">
+            </div>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#" class="nav-link active">Trang Chủ</a>
+                <a href="#menu-section" class="nav-link">Thực Đơn</a>
+                <a href="#combo-section" class="nav-link">Combo Tiết Kiệm</a>
+                <a href="#about-section" class="nav-link">Về Chúng Tôi</a>
+                <a href="#footer-section" class="nav-link">Liên Hệ</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="cart-btn" id="cartBtn" aria-label="Giỏ hàng">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="menu-toggle-btn" id="menuToggle" aria-label="Mở menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <span class="logo-text">FOOD<span class="highlight">ZONE</span></span>
+            <button class="close-mobile-nav" id="closeMobileNav"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="mobile-search">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="mobileSearchInput" placeholder="Tìm món ăn...">
+        </div>
+        <div class="mobile-nav-links">
+            <a href="#" class="mobile-nav-link active">Trang Chủ</a>
+            <a href="#menu-section" class="mobile-nav-link">Thực Đơn</a>
+            <a href="#combo-section" class="mobile-nav-link">Combo Tiết Kiệm</a>
+            <a href="#about-section" class="mobile-nav-link">Về Chúng Tôi</a>
+            <a href="#footer-section" class="mobile-nav-link">Liên Hệ</a>
+        </div>
+    </div>
+    <div class="overlay" id="mobileNavOverlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-tag"><i class="fa-solid fa-fire-flame-curved"></i> Căn tin HVPN - Nhanh chóng & Tiện lợi</span>
+                <h1 class="hero-title">Ăn Ngon, Giá Rẻ <br><span class="hero-highlight">Chuẩn Sinh Viên!</span></h1>
+                <p class="hero-description">Nạp năng lượng cho những giờ học căng thẳng với thực đơn phong phú, siêu ngon, giá cực "mềm". Giao nhanh tận lớp học, thư viện hay ký túc xá chỉ trong 10 phút!</p>
+                <div class="hero-actions">
+                    <a href="#menu-section" class="btn btn-primary btn-lg">Khám Phá Menu <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#combo-section" class="btn btn-secondary btn-lg">Săn Deal Hot <i class="fa-solid fa-gift"></i></a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-num">10k+</span>
+                        <span class="stat-label">Bữa ăn mỗi ngày</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">10p</span>
+                        <span class="stat-label">Thời gian giao trung bình</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">4.9★</span>
+                        <span class="stat-label">Đánh giá từ sinh viên</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <div class="hero-image-bg"></div>
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800" alt="Delicious Food Bowl" class="hero-img floating-img">
+                <div class="hero-badge badge-1">
+                    <span class="badge-icon"><i class="fa-solid fa-bolt"></i></span>
+                    <div class="badge-text">
+                        <h4>Giao KTX 0đ</h4>
+                        <p>Nhanh chóng & Miễn phí</p>
+                    </div>
+                </div>
+                <div class="hero-badge badge-2">
+                    <span class="badge-icon"><i class="fa-solid fa-tags"></i></span>
+                    <div class="badge-text">
+                        <h4>Ưu đãi tới 30%</h4>
+                        <p>Dành riêng cho SV</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wave-divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C26.9,8.75,55.05,16.22,83.1,22.81,141.6,36.58,202,42,261.26,45.75A1121.72,1121.72,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Services / Features Section -->
+    <section class="features-section" id="about-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">Tại Sao Sinh Viên Chọn FOODZONE?</span>
+                <h2 class="main-title">Dịch Vụ Chuẩn "Gu" Sinh Viên</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-wallet"></i></div>
+                    <h3>Giá Cực Học Sinh, Sinh Viên</h3>
+                    <p>Suất ăn trưa đầy đủ dinh dưỡng chỉ từ 20k - 30k. Menu đa dạng phù hợp túi tiền những ngày cuối tháng.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+                    <h3>Giao Hàng Siêu Tốc</h3>
+                    <p>Nhận đồ ăn nóng hổi ngay tại KTX, phòng học, ghế đá thư viện. Không còn lo lắng trễ giờ học hay đói bụng giữa giờ.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>An Toàn Vệ Sinh</h3>
+                    <p>Nguyên liệu tươi sạch có nguồn gốc rõ ràng, chế biến sạch sẽ, chuẩn chỉ tiêu an toàn vệ sinh thực phẩm của Bộ Y Tế.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h3>Đặt Món Tiện Lợi</h3>
+                    <p>Thao tác đặt món dễ dàng qua web điện thoại, thanh toán linh hoạt qua MoMo, Chuyển khoản hoặc Tiền mặt khi nhận.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Combo Section -->
+    <section class="combo-section" id="combo-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">Siêu Ưu Đãi Mỗi Ngày</span>
+                <h2 class="main-title">Combo Tiết Kiệm - No Căng Rốn</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="combos-grid">
+                <!-- Combo 1 -->
+                <div class="combo-card">
+                    <div class="combo-badge">Bán Chạy</div>
+                    <div class="combo-image">
+                        <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&q=80&w=400" alt="Combo Sức Trẻ">
+                    </div>
+                    <div class="combo-info">
+                        <h3>Combo Học Chăm Chỉ</h3>
+                        <p class="combo-desc">Cơm Sườn cốt lết + 1 Trứng ốp la + 1 Trà đá mát lạnh</p>
+                        <div class="combo-tags">
+                            <span><i class="fa-solid fa-burger"></i> Cơm Trưa</span>
+                            <span><i class="fa-solid fa-mug-hot"></i> Đồ uống</span>
+                        </div>
+                        <div class="combo-footer">
+                            <div class="combo-price">
+                                <span class="new-price">35.000đ</span>
+                                <span class="old-price">45.000đ</span>
+                            </div>
+                            <button class="btn btn-primary btn-sm add-combo-to-cart" data-id="combo-1" data-name="Combo Học Chăm Chỉ" data-price="35000" data-img="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&q=80&w=400">Đặt ngay</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Combo 2 -->
+                <div class="combo-card">
+                    <div class="combo-badge">Giảm 25%</div>
+                    <div class="combo-image">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=400" alt="Combo Đôi Bạn">
+                    </div>
+                    <div class="combo-info">
+                        <h3>Combo Đôi Bạn Cùng Tiến</h3>
+                        <p class="combo-desc">2 Burger Bò phô mai + 2 Cốc Pepsi mát lạnh sảng khoái</p>
+                        <div class="combo-tags">
+                            <span><i class="fa-solid fa-users"></i> Cho 2 người</span>
+                            <span><i class="fa-solid fa-cookie-bite"></i> Đồ ăn nhanh</span>
+                        </div>
+                        <div class="combo-footer">
+                            <div class="combo-price">
+                                <span class="new-price">55.000đ</span>
+                                <span class="old-price">74.000đ</span>
+                            </div>
+                            <button class="btn btn-primary btn-sm add-combo-to-cart" data-id="combo-2" data-name="Combo Đôi Bạn Cùng Tiến" data-price="55000" data-img="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=400">Đặt ngay</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Combo 3 -->
+                <div class="combo-card">
+                    <div class="combo-badge">Hot Deal</div>
+                    <div class="combo-image">
+                        <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=400" alt="Combo Ôn Thi">
+                    </div>
+                    <div class="combo-info">
+                        <h3>Combo Ôn Thi Xuyên Đêm</h3>
+                        <p class="combo-desc">1 Mì trộn Indomie thập cẩm + 1 Trà sữa trân châu lớn</p>
+                        <div class="combo-tags">
+                            <span><i class="fa-solid fa-moon"></i> Cứu đói đêm</span>
+                            <span><i class="fa-solid fa-circle-dot"></i> Trà sữa</span>
+                        </div>
+                        <div class="combo-footer">
+                            <div class="combo-price">
+                                <span class="new-price">39.000đ</span>
+                                <span class="old-price">50.000đ</span>
+                            </div>
+                            <button class="btn btn-primary btn-sm add-combo-to-cart" data-id="combo-3" data-name="Combo Ôn Thi Xuyên Đêm" data-price="39000" data-img="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=400">Đặt ngay</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Menu / Dishes Section -->
+    <section class="menu-section" id="menu-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">Thực Đơn Đa Dạng</span>
+                <h2 class="main-title">Hôm Nay Bạn Muốn Ăn Gì?</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <!-- Categories Tabs -->
+            <div class="categories-container">
+                <div class="categories-scroll">
+                    <button class="category-tab active" data-category="all">
+                        <i class="fa-solid fa-border-all"></i> Tất Cả
+                    </button>
+                    <button class="category-tab" data-category="lunch">
+                        <i class="fa-solid fa-bowl-rice"></i> Cơm Trưa
+                    </button>
+                    <button class="category-tab" data-category="snacks">
+                        <i class="fa-solid fa-cookie-bite"></i> Đồ Ăn Vặt
+                    </button>
+                    <button class="category-tab" data-category="drinks">
+                        <i class="fa-solid fa-mug-hot"></i> Đồ Uống
+                    </button>
+                    <button class="category-tab" data-category="desserts">
+                        <i class="fa-solid fa-ice-cream"></i> Tráng Miệng
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Cards Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be generated dynamically by JS -->
+            </div>
+            
+            <div class="no-results" id="noResults">
+                <i class="fa-regular fa-face-frown"></i>
+                <p>Không tìm thấy món ăn nào phù hợp với tìm kiếm của bạn.</p>
+                <button class="btn btn-secondary btn-sm" id="resetSearch">Xem tất cả món ăn</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Campus Delivery Info -->
+    <section class="campus-delivery-section">
+        <div class="container campus-delivery-container">
+            <div class="delivery-map-illustration">
+                <div class="pulse-marker marker-canteen"><span class="marker-label">Căn tin</span></div>
+                <div class="pulse-marker marker-ktxa"><span class="marker-label">KTX A</span></div>
+                <div class="pulse-marker marker-ktxb"><span class="marker-label">KTX B</span></div>
+                <div class="pulse-marker marker-hust"><span class="marker-label">Tòa Nhà D3</span></div>
+                <div class="delivery-line"></div>
+                <div class="delivery-scooter"><i class="fa-solid fa-motorcycle"></i></div>
+            </div>
+            <div class="delivery-info-content">
+                <h2>Bản Đồ Giao Hàng Nội Khu</h2>
+                <p>Chúng tôi có đội ngũ shipper sinh viên năng động, thuộc từng ngõ ngách trong trường học và ký túc xá. Đảm bảo giao siêu tốc!</p>
+                <ul class="delivery-zones-list">
+                    <li>
+                        <span class="zone-name"><i class="fa-solid fa-hotel"></i> Khu Ký túc xá (A, B, C, D)</span>
+                        <span class="zone-time">Thời gian: 5 - 10 phút</span>
+                    </li>
+                    <li>
+                        <span class="zone-name"><i class="fa-solid fa-school"></i> Các tòa nhà Giảng đường (A1, B1, D3, C1...)</span>
+                        <span class="zone-time">Thời gian: 7 - 12 phút</span>
+                    </li>
+                    <li>
+                        <span class="zone-name"><i class="fa-solid fa-tree"></i> Sân bóng, thư viện, khu tự học, bể bơi</span>
+                        <span class="zone-time">Thời gian: 8 - 15 phút</span>
+                    </li>
+                </ul>
+                <div class="delivery-note">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span><strong>Mẹo nhỏ:</strong> Nhập số phòng KTX hoặc số phòng học khi đặt hàng để shipper mang lên tận nơi nhé!</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">Khách Hàng Nói Gì?</span>
+                <h2 class="main-title">Đánh Giá Từ Các Sinh Viên</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="feedback">"Đồ ăn ngon, nóng hổi, giao cực kì nhanh. Mình đặt combo cơm sườn với trà đá giao đến tận phòng KTX B10 luôn, shipper rất nhiệt tình và thân thiện!"</p>
+                    <div class="student-info">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150" alt="Sinh viên" class="student-avatar">
+                        <div>
+                            <h4>Nguyễn Thuỳ Linh</h4>
+                            <span>Sinh viên K12</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="feedback">"Giá siêu hạt dẻ phù hợp ví tiền sinh viên. Cuối tháng ví mỏng vẫn có cơm trưa ngon lành, nhiều cơm nhiều thịt. Sẽ ủng hộ Canteen dài dài ạ."</p>
+                    <div class="student-info">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150" alt="Sinh viên" class="student-avatar">
+                        <div>
+                            <h4>Trần Hoàng Nam</h4>
+                            <span>Sinh viên K11</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <p class="feedback">"Trà sữa nướng và nem chua rán ở đây đỉnh thực sự, ngon không kém gì ngoài quán lớn mà giá chỉ bằng một nửa. Menu phong phú tha hồ đổi món mỗi ngày."</p>
+                    <div class="student-info">
+                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=150" alt="Sinh viên" class="student-avatar">
+                        <div>
+                            <h4>Lê Minh Ánh</h4>
+                            <span>Sinh viên K11</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section" id="footer-section">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <a href="#" class="logo footer-logo">
+                    <span class="logo-icon"><i class="fa-solid fa-utensils"></i></span>
+                    <span class="logo-text">FOOD<span class="highlight">ZONE</span></span>
+                </a>
+                <p class="footer-desc">Hệ thống căn tin sinh viên hiện đại, mang lại bữa ăn chất lượng, an toàn và tiện lợi nhất cho sinh viên trên toàn khu vực đại học.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" class="social-link"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Liên Kết Nhanh</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Trang Chủ</a></li>
+                    <li><a href="#menu-section"><i class="fa-solid fa-chevron-right"></i> Thực Đơn</a></li>
+                    <li><a href="#combo-section"><i class="fa-solid fa-chevron-right"></i> Combo Tiết Kiệm</a></li>
+                    <li><a href="#about-section"><i class="fa-solid fa-chevron-right"></i> Về Chúng Tôi</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Thời Gian Mở Cửa</h3>
+                <ul class="footer-hours">
+                    <li><span>Thứ Hai - Thứ Sáu:</span> <strong>06:30 - 21:00</strong></li>
+                    <li><span>Thứ Bảy - Chủ Nhật:</span> <strong>07:30 - 20:30</strong></li>
+                    <li class="status-open"><span class="indicator"></span> Đang hoạt động</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Thông Tin Liên Hệ</h3>
+                <ul class="footer-contact">
+                    <li><i class="fa-solid fa-location-dot"></i> Khu nhà dịch vụ Căn tin A2, Học viện Phụ nữ Việt Nam, 68 Nguyễn Chí Thanh, Hà Nội</li>
+                    <li><i class="fa-solid fa-phone"></i> Hotline: <a href="tel:0987654321">0987 654 321</a></li>
+                    <li><i class="fa-solid fa-envelope"></i> Email: <a href="mailto:support@svcanteen.vn">support@foodzone.vn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <p>&copy; 2026 FOODZONE. Tất cả quyền được bảo lưu. Phát triển bởi Đội Ngũ Sinh Viên VWA.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Chính sách bảo mật</a>
+                    <a href="#">Điều khoản sử dụng</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar (Drawer) -->
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3><i class="fa-solid fa-basket-shopping"></i> Giỏ Hàng Của Bạn</h3>
+            <button class="close-cart-btn" id="closeCartBtn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-body" id="cartBody">
+            <!-- Empty Cart State -->
+            <div class="empty-cart" id="emptyCart">
+                <img src="https://cdn-icons-png.flaticon.com/512/11329/11329060.png" alt="Giỏ hàng trống" class="empty-cart-img">
+                <p>Giỏ hàng của bạn đang trống trơn!</p>
+                <a href="#menu-section" class="btn btn-primary btn-sm" id="shopNowBtn">Mua ngay thôi</a>
+            </div>
+            <!-- Cart Items Container -->
+            <div class="cart-items" id="cartItemsList">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter">
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Tạm tính:</span>
+                    <span id="cartSubtotal">0đ</span>
+                </div>
+                <div class="summary-row">
+                    <span>Phí giao hàng:</span>
+                    <span class="free-shipping">0đ (Miễn phí nội khu)</span>
+                </div>
+                <div class="summary-row total-row">
+                    <span>Tổng cộng:</span>
+                    <span id="cartTotal">0đ</span>
+                </div>
+            </div>
+            <button class="btn btn-primary btn-block" id="checkoutBtn">Tiến Hành Đặt Hàng <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+    <div class="overlay" id="cartOverlay"></div>
+
+    <!-- Checkout Modal -->
+    <div class="modal-backdrop" id="checkoutModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-file-invoice-dollar"></i> Xác Nhận Đặt Hàng</h3>
+                <button class="close-modal" id="closeCheckoutModal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <form id="checkoutForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="studentName"><i class="fa-solid fa-user"></i> Họ & Tên <span class="required">*</span></label>
+                            <input type="text" id="studentName" placeholder="Ví dụ: Nguyễn Văn A" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="studentPhone"><i class="fa-solid fa-phone"></i> Số Điện Thoại <span class="required">*</span></label>
+                            <input type="tel" id="studentPhone" placeholder="Ví dụ: 0987654321" pattern="[0-9]{10}" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="deliveryArea"><i class="fa-solid fa-building"></i> Khu Vực Nhận Hàng <span class="required">*</span></label>
+                        <select id="deliveryArea" required>
+                            <option value="" disabled selected>Chọn khu vực của bạn...</option>
+                            <optgroup label="Khu Vực Ký Túc Xá">
+                                <option value="KTX A1-A5">Ký Túc Xá A (Phòng A1 đến A5)</option>
+                                <option value="KTX B1-B10">Ký Túc Xá B (Phòng B1 đến B10)</option>
+                                <option value="KTX C1-C5">Ký Túc Xá C (Phòng C1 đến C5)</option>
+                            </optgroup>
+                            <optgroup label="Khu Giảng Đường">
+                                <option value="Giảng đường D3-D5">Nhà Giảng Đường D3-D5</option>
+                                <option value="Giảng đường B1">Nhà Giảng Đường B1</option>
+                                <option value="Giảng đường C1">Nhà Giảng Đường C1</option>
+                                <option value="Thư viện Tạ Quang Bửu">Thư viện Tầng 13</option>
+                            </optgroup>
+                            <optgroup label="Khu Giảng Đường ">
+                                <option value="Tòa nhà A2 ">Tòa nhà A2 </option>
+                                <option value="Giảng đường B ">Giảng đường B </option>
+                                <option value="Khu vực ngoài trường">Khu vực lân cận trường (Bán kính 1km)</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="detailedAddress"><i class="fa-solid fa-location-arrow"></i> Địa Chỉ Chi Tiết (Phòng KTX, Phòng Học) <span class="required">*</span></label>
+                        <input type="text" id="detailedAddress" placeholder="Ví dụ: Phòng 402 - KTX B5 hoặc Phòng 302 - D3-5" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-credit-card"></i> Phương Thức Thanh Toán <span class="required">*</span></label>
+                        <div class="payment-methods">
+                            <label class="payment-method-card active">
+                                <input type="radio" name="paymentMethod" value="cod" checked>
+                                <span class="payment-icon"><i class="fa-solid fa-money-bill-wave"></i></span>
+                                <span class="payment-name">Tiền mặt khi nhận</span>
+                            </label>
+                            <label class="payment-method-card">
+                                <input type="radio" name="paymentMethod" value="momo">
+                                <span class="payment-icon"><i class="fa-solid fa-wallet"></i></span>
+                                <span class="payment-name">Ví điện tử MoMo</span>
+                            </label>
+                            <label class="payment-method-card">
+                                <input type="radio" name="paymentMethod" value="bank">
+                                <span class="payment-icon"><i class="fa-solid fa-building-columns"></i></span>
+                                <span class="payment-name">Chuyển khoản QR</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="orderNotes"><i class="fa-solid fa-comment-dots"></i> Ghi Chú Đơn Hàng (Tùy chọn)</label>
+                        <textarea id="orderNotes" rows="2" placeholder="Ví dụ: Nhiều đá, ít ngọt, không cay, shipper gọi trước khi tới nhé..."></textarea>
+                    </div>
+
+                    <!-- Small order summary in checkout modal -->
+                    <div class="checkout-summary-box">
+                        <h4>Tóm tắt đơn hàng</h4>
+                        <div class="summary-items" id="modalSummaryItems">
+                            <!-- Populated dynamically -->
+                        </div>
+                        <div class="summary-total">
+                            <span>Tổng tiền cần thanh toán:</span>
+                            <span id="modalTotalAmount">0đ</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block btn-lg" id="submitOrderBtn">Xác Nhận Đặt Hàng <i class="fa-solid fa-circle-check"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal-backdrop" id="successModal">
+        <div class="modal modal-sm success-modal-content">
+            <div class="success-animation">
+                <div class="checkmark-circle">
+                    <div class="background"></div>
+                    <div class="checkmark draw"></div>
+                </div>
+            </div>
+            <h2>Đặt Hàng Thành Công!</h2>
+            <p>Cảm ơn bạn đã lựa chọn <strong>FOODZONE</strong>. Đơn hàng của bạn đã được chuyển đến bếp căn tin và đang được chuẩn bị.</p>
+            <div class="order-id-box">
+                Mã đơn hàng của bạn: <strong id="orderIdText">FZ-12489</strong>
+            </div>
+            <p class="delivery-time-estimate"><i class="fa-regular fa-clock"></i> Shipper sẽ liên lạc sau <strong>10 - 15 phút</strong>!</p>
+            <button class="btn btn-primary btn-block" id="closeSuccessBtn">Tiếp tục mua sắm</button>
+        </div>
+    </div>
+
+    <!-- Live Toast Notification -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Scroll To Top Button -->
+    <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Lên đầu trang">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom JS -->
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>
